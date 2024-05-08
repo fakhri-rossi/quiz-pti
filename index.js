@@ -95,16 +95,27 @@ app.get('/', (req, res) => {
 app.get('/:category', (req, res) => {
     const { category } = req.params;
     const filteredSongs = songs.filter(song => song.category.toLowerCase() == category.toString());
-    res.render('kategori', {category, filteredSongs});
+    if(filteredSongs.length > 0){
+        res.render('kategori', {category, filteredSongs});
+    } else {
+        res.render('notfound');
+    }
 })
 
 app.get('/lirik/:id', (req, res) => {
     const {id} = req.params;
     const song = songs.find(s => parseInt(s.id) == id);
-    console.log(song);
-    
-    res.render('lirik', { song });
+
+    if(song){
+        res.render('lirik', { song });
+    } else {
+        res.render('notfound');
+    }
 });
+
+app.get('*', (req, res) => {
+    res.render('notfound');
+})
 
 app.listen(8080, () => {
     console.log('Server is running at "http://localhost:8080"');
