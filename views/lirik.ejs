@@ -1,0 +1,20 @@
+<%- include('partials/header.ejs') %>
+
+    <h1>Lirik</h1>
+    <h2><%= song.title %></h2>
+    <div>
+        <% for(let line of song.content){ %>
+            <p>
+                <% if(line == "[br]"){ %>
+                    <br>
+
+                <% } else { %>
+                    <%= line %>
+                    
+                <% } %>
+            </p>
+        <% } %> 
+    </div>
+    <a href="/">kembali</a>
+
+<%- include('partials/footer.ejs') %>
