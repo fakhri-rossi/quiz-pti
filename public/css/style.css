@@ -1,0 +1,279 @@
+/* -- Global Class -- */
+.container-sm {
+  width: 80%;
+  margin: auto;
+}
+
+/* -- Manual Styling -- */
+/* Media Screen Tablet 768px to 992px */
+* {
+  padding: 0;
+  margin: 0;
+  font-family: "Reddit Sans", sans-serif;
+}
+
+body {
+  background-color: #fdfdfd;
+}
+
+/* --Navbar Components -- */
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  height: 120px;
+}
+nav .nav-logo .logo {
+  font-size: 32px;
+  color: #1db954;
+}
+nav .nav-menu {
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+}
+nav .nav-menu .nav-link {
+  color: #121212;
+  text-decoration: none;
+  margin: 0px 24px;
+  font-weight: 300;
+  opacity: 0.8;
+}
+nav .nav-menu .nav-link.active {
+  font-weight: 500;
+  opacity: 1;
+}
+nav .nav-menu .nav-link:hover {
+  opacity: 1;
+}
+nav .nav-menu .nav-action {
+  display: flex;
+  margin-left: 14px;
+}
+nav .nav-menu .nav-action .nav-link {
+  font-size: 16px;
+  margin: 0px 4px;
+}
+nav .nav-menu .nav-action .nav-link.btn {
+  background-color: #1db954;
+  opacity: 1;
+  font-weight: 600;
+  padding: 12px 24px;
+  border-radius: 24px;
+  transition: all ease-in-out 0.4s;
+}
+nav .nav-menu .nav-action .nav-link.btn:nth-child(1) {
+  display: flex;
+  align-items: center;
+}
+nav .nav-menu .nav-action .nav-link.btn:nth-child(1) i {
+  margin-right: 6px;
+}
+nav .nav-menu .nav-action .nav-link.btn:hover {
+  background-color: #1aab4c;
+}
+nav .nav-menu .nav-action .nav-link.btn.btn-outline {
+  background-color: transparent;
+  border: 2px solid #1db954;
+  color: #1db954;
+}
+nav .nav-menu .toggle {
+  background-color: #eaeaea;
+  cursor: pointer;
+  text-decoration: none;
+  border-radius: 24px;
+  display: flex;
+  padding: 6px;
+  font-size: 20px;
+  align-items: center;
+  color: #535353;
+  transition: all ease 0.4s;
+}
+nav .nav-menu .toggle:hover {
+  background-color: #dadada;
+}
+nav .menu-toggle {
+  display: none;
+}
+
+.sidebar {
+  width: 100%;
+  height: 100vh;
+  transform: translateX(-100%);
+  position: fixed;
+  transition: all ease-in-out 0.4s;
+}
+.sidebar .sidebar-menu {
+  display: flex;
+  align-items: left;
+  justify-content: space-betw;
+  flex-direction: column;
+  flex-wrap: nowrap;
+}
+.sidebar .sidebar-menu .sidebar-link {
+  text-decoration: none;
+  font-size: 20px;
+  margin: 24px 0px;
+  color: #212121;
+}
+.sidebar .sidebar-menu.footer {
+  margin-top: 320px;
+}
+.sidebar .sidebar-menu.footer .sidebar-link {
+  background-color: #1db954;
+  color: #212121;
+  margin: 4px 0px;
+  padding: 14px 0px;
+  border-radius: 8px;
+  font-weight: 700;
+  text-align: center;
+}
+.sidebar .sidebar-menu.footer .sidebar-link i {
+  font-size: 18px;
+}
+.sidebar .sidebar-menu.footer .sidebar-link.btn-outline {
+  background-color: transparent;
+  border: 2px solid #1db954;
+  color: #1db954;
+  transition: all ease 0.4s;
+}
+.sidebar .sidebar-menu.footer .sidebar-link.btn-outline:hover {
+  color: #212121;
+}
+.sidebar .sidebar-menu.footer .sidebar-link:hover {
+  background-color: #1aab4c;
+}
+
+/* --Hero Components -- */
+section .hero-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+  flex-wrap: nowrap;
+}
+section .hero-section .hero-desc {
+  width: 50%;
+}
+section .hero-section .hero-desc .hero-desc_title .display-4 {
+  font-size: 54px;
+  margin-bottom: 14px;
+  color: #212121;
+}
+section .hero-section .hero-desc .hero-desc_title .display-4 .onColor {
+  color: #1db954;
+}
+section .hero-section .hero-desc .hero-desc_title p {
+  font-size: 16px;
+  line-height: 150%;
+  opacity: 0.8;
+}
+section .hero-section .hero-desc .hero-desc_cta {
+  margin-top: 54px;
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  flex-direction: row;
+  flex-wrap: nowrap;
+}
+section .hero-section .hero-desc .hero-desc_cta .btn {
+  font-size: 18px;
+  font-weight: 500;
+  background-color: #1db954;
+  color: #212121;
+  border-radius: 24px;
+  padding: 14px 28px;
+  text-decoration: none;
+}
+section .hero-section .hero-desc .hero-desc_cta img {
+  margin-left: 24px;
+  height: 54px;
+}
+section .hero-section .hero-img img {
+  width: 500px;
+}
+
+/* Media Screen Mobile 390px to 768px */
+@media only screen and (max-width: 768px) {
+  .container-sm {
+    width: 86%;
+    margin: auto;
+  }
+  nav {
+    height: 88px;
+  }
+  nav .nav-menu {
+    display: none;
+  }
+  nav .menu-toggle {
+    position: relative;
+    display: block;
+  }
+  nav .menu-toggle .icon {
+    display: flex;
+    flex-direction: column;
+  }
+  nav .menu-toggle .icon span {
+    background-color: #535353;
+    margin: 3px 0px;
+    width: 24px;
+    height: 3px;
+    border-radius: 2px;
+    transition: all ease-in-out 0.4s;
+  }
+  nav .menu-toggle .icon span:nth-child(1) {
+    width: 18px;
+  }
+  nav .menu-toggle .icon span:nth-child(3) {
+    width: 12px;
+  }
+  nav .menu-toggle.open .icon span:nth-child(1) {
+    width: 24px;
+    transform: translateY(9px) rotate(45deg);
+  }
+  nav .menu-toggle.open .icon span:nth-child(2) {
+    opacity: 0;
+  }
+  nav .menu-toggle.open .icon span:nth-child(3) {
+    width: 24px;
+    transform: translateY(-9px) rotate(-45deg);
+  }
+  .sidebar.show {
+    background-color: #fdfdfd;
+    transform: translateX(0%);
+  }
+  section .hero-section {
+    padding: 40px 0px;
+    flex-direction: column-reverse;
+    justify-content: center !important;
+  }
+  section .hero-section .hero-desc {
+    width: 100%;
+    text-align: center;
+  }
+  section .hero-section .hero-desc .hero-desc_title .display-4 {
+    font-size: 48px !important;
+  }
+  section .hero-section .hero-desc .hero-desc_title p {
+    margin: auto;
+    width: 86%;
+  }
+  section .hero-section .hero-desc .hero-desc_cta {
+    margin-top: 40px;
+    flex-direction: column;
+  }
+  section .hero-section .hero-desc .hero-desc_cta img {
+    margin: 40px 0px;
+  }
+  section .hero-section .hero-img {
+    margin-bottom: 40px;
+  }
+  section .hero-section .hero-img img {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+  }
+}
+/* Media Screen Tablet 768px to 992px *//*# sourceMappingURL=style.css.map */

@@ -1,25 +1,12 @@
-<%- include('partials/header.ejs') %>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <%- include('partials/header.ejs') %>
+  </head>
+  <body>
+    <%- include('components/navbar.ejs') %> <%- include('components/hero.ejs')
+    %>
+  </body>
 
-    <h1>Homepage</h1>
-    <!-- <a href="artikel/12">Artikel</a> -->
-    <ul>
-        <% for(let song of songs){ %>
-            
-            <li> <%= song.title %> </li>
-
-        <% } %>
-    </ul>
-
-    <div>
-        <div>
-            <a href="/pop">Pop</a>
-        </div>
-        <div>
-            <a href="/rock">Rock</a>
-        </div>
-        <div>
-            <a href="/indie">Indie</a>
-        </div>
-    </div>
-
-<%- include('partials/footer.ejs') %>
+  <script src="/js/dom.js"></script>
+</html>
