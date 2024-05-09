@@ -94,16 +94,24 @@ body {
 }
 
 /* --Navbar Components -- */
+header {
+  background-color: $dark2-color;
+}
 nav {
   @include d-flex(space-between, center);
   height: 120px;
 
+  .nav-logo {
+    .logo {
+      color: $bg-color;
+    }
+  }
   .nav-menu {
     font-size: 18px;
     display: flex;
     align-items: center;
     .nav-link {
-      color: $dark2-color;
+      color: $bg-color;
       text-decoration: none;
       margin: 0px 24px;
       font-weight: 300;
@@ -124,6 +132,7 @@ nav {
       .nav-link {
         font-size: 16px;
         margin: 0px 4px;
+        color: $bg-color;
         &.btn {
           background-color: #1db954;
           opacity: 1;
@@ -185,14 +194,14 @@ nav {
       text-decoration: none;
       font-size: 20px;
       margin: 24px 0px;
-      color: $dark-color;
+      color: $bg-color;
     }
     &.footer {
       margin-top: 320px;
 
       .sidebar-link {
         background-color: #1db954;
-        color: $dark-color;
+        color: $bg-color;
         margin: 4px 0px;
         padding: 14px 0px;
         border-radius: 8px;
@@ -222,7 +231,6 @@ nav {
 }
 
 section {
-  margin: 100px 0px;
   .section-title {
     text-align: center;
     .display-6 {
@@ -235,7 +243,10 @@ section {
   }
 
   /* --Hero Components -- */
-
+  &.hero {
+    background-color: $dark2-color;
+    padding: 40px 0px;
+  }
   .hero-section {
     @include d-flex(space-between, center);
     .hero-desc {
@@ -244,7 +255,7 @@ section {
         .display-4 {
           font-size: 54px;
           margin-bottom: 14px;
-          color: $dark-color;
+          color: $bg-color;
           .onColor {
             color: $main-color;
           }
@@ -253,6 +264,7 @@ section {
           font-size: 16px;
           line-height: 150%;
           opacity: 0.8;
+          color: $bg-color;
         }
       }
       .hero-desc_cta {
@@ -280,10 +292,10 @@ section {
       }
     }
   }
-
   /* --Trending Music Components -- */
 
   .trending-music {
+    margin: 100px 0px;
     .trend-list {
       margin: 50px 0px;
       @include d-flex(space-between, center, $wrap: true);
@@ -346,6 +358,7 @@ section {
   }
 
   .premium-section {
+    margin: 100px 0px;
     list-style: none;
     .plan-list {
       @include d-flex(space-between, center);
@@ -401,6 +414,7 @@ section {
   }
 
   .blog-section {
+    margin: 100px 0px;
     .blog-list {
       margin: 50px 0px;
       @include d-flex(space-between, center, $wrap: true);
@@ -438,6 +452,8 @@ section {
             font-size: 18px;
             align-items: center;
             justify-content: space-between;
+            text-decoration: none;
+            color: $dark2-color;
             i {
               font-size: 32px;
               transform: rotate(45deg);
@@ -449,6 +465,63 @@ section {
               color: $main-color;
             }
           }
+        }
+      }
+    }
+  }
+
+  .detail-article {
+    margin: 100px 0px;
+
+    .breadcrumbs {
+      padding: 10px 0px;
+      margin-bottom: 50px;
+      list-style: none;
+      @include d-flex(left, center);
+      cursor: pointer;
+      li {
+        margin-right: 8px;
+        a {
+          color: $dark-color;
+          text-decoration: none;
+          opacity: 0.7;
+          transition: all ease 0.1s;
+          &:hover {
+            opacity: 1;
+          }
+        }
+
+        &.active {
+          font-weight: 600;
+
+          a {
+            opacity: 1;
+          }
+        }
+      }
+    }
+
+    .article-img {
+      background-color: #eaeaea;
+      width: 100%;
+      height: 420px;
+      margin-bottom: 40px;
+      img {
+        width: 100%;
+        height: 100%;
+        background-image: cover;
+      }
+    }
+    .article-detail {
+      .article-head {
+        margin-bottom: 40px;
+        h1 {
+          font-size: 32px;
+        }
+      }
+      .article-content {
+        p {
+          margin-bottom: 24px;
         }
       }
     }
@@ -527,7 +600,14 @@ footer {
   .container-sm {
     @include container(86%);
   }
+  header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 999;
+  }
   nav {
+    z-index: 999;
     height: 88px;
     .nav-menu {
       display: none;
@@ -540,7 +620,7 @@ footer {
         display: flex;
         flex-direction: column;
         span {
-          background-color: $second-color;
+          background-color: $bg-color;
           margin: 3px 0px;
           width: 24px;
           height: 3px;
@@ -577,8 +657,15 @@ footer {
   }
   .sidebar {
     &.show {
-      background-color: $bg-color;
+      height: 100vh;
+      background-color: $dark2-color;
       transform: translateX(0%);
+
+      .hero-desc_title {
+        p {
+          opacity: 0;
+        }
+      }
     }
   }
 
@@ -595,6 +682,8 @@ footer {
             font-size: 48px !important;
           }
           p {
+            color: $bg-color;
+            z-index: -1;
             margin: auto;
             width: 86%;
           }
