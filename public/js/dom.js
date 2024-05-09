@@ -1,6 +1,6 @@
-import trendingMusic from "./data.js";
-import packagePlan from "./data.js";
-import blog from "./data.js";
+// import trendingMusic from "./data.js";
+// import packagePlan from "./data.js";
+// import blog from "./data.js";
 
 const menuToggle = document.querySelector(".menu-toggle");
 let sideBar = document.querySelector(".sidebar");
