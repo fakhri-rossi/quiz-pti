@@ -4,6 +4,15 @@
   margin: auto;
 }
 
+.logo, section .premium-section .plan-list .card-plan .card-body .card-title .card-logo {
+  font-size: 36px;
+  color: #1db954;
+}
+
+.main-color {
+  color: #1db954;
+}
+
 /* -- Manual Styling -- */
 /* Media Screen Tablet 768px to 992px */
 * {
@@ -24,10 +33,6 @@ nav {
   flex-direction: row;
   flex-wrap: nowrap;
   height: 120px;
-}
-nav .nav-logo .logo {
-  font-size: 32px;
-  color: #1db954;
 }
 nav .nav-menu {
   font-size: 18px;
@@ -146,7 +151,21 @@ nav .menu-toggle {
   background-color: #1aab4c;
 }
 
-/* --Hero Components -- */
+section {
+  margin: 100px 0px;
+  /* --Hero Components -- */
+  /* --Trending Music Components -- */
+}
+section .section-title {
+  text-align: center;
+}
+section .section-title .display-6 {
+  font-size: 36px;
+  margin-bottom: 6px;
+}
+section .section-title p {
+  font-size: 16px;
+}
 section .hero-section {
   display: flex;
   align-items: center;
@@ -193,6 +212,242 @@ section .hero-section .hero-desc .hero-desc_cta img {
 }
 section .hero-section .hero-img img {
   width: 500px;
+}
+section .trending-music .trend-list {
+  margin: 50px 0px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+section .trending-music .trend-list .items {
+  width: 30%;
+  list-style: none;
+  display: flex;
+  margin: 24px 14px;
+  align-items: center;
+}
+section .trending-music .trend-list .items .music-cover {
+  cursor: pointer;
+  width: 64px;
+  height: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+section .trending-music .trend-list .items .music-cover img {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  border-radius: 12px;
+}
+section .trending-music .trend-list .items .music-cover i {
+  position: absolute;
+  color: #fdfdfd;
+  font-size: 24px;
+  padding: 4px;
+  background-color: rgba(0, 0, 0, 0.5019607843);
+  border-radius: 50%;
+}
+section .trending-music .trend-list .items .music-detail {
+  margin-left: 32px;
+}
+section .trending-music .trend-list .items .music-detail .music-title {
+  font-size: 20px;
+}
+section .trending-music .more-btn {
+  padding: 24px 0px;
+  text-align: center;
+}
+section .trending-music .more-btn a {
+  text-decoration: none;
+  font-weight: 600;
+  border-radius: 24px;
+  color: #212121;
+  padding: 14px 24px;
+  background-color: #1db954;
+  transition: all ease 0.4s;
+}
+section .trending-music .more-btn a:hover {
+  background-color: #1aab4c;
+}
+section .premium-section {
+  list-style: none;
+}
+section .premium-section .plan-list {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  margin: 64px 0px;
+}
+section .premium-section .plan-list .card-plan {
+  border: 1px solid #eaeaea;
+  border-radius: 12px;
+  width: 30%;
+  padding: 14px;
+}
+section .premium-section .plan-list .card-plan .card-body {
+  padding: 24px;
+}
+section .premium-section .plan-list .card-plan .card-body .card-title .card-logo {
+  font-size: 16px;
+  font-weight: 500;
+  margin-bottom: 14px;
+}
+section .premium-section .plan-list .card-plan .card-body .card-title h3 {
+  font-size: 32px;
+}
+section .premium-section .plan-list .card-plan .card-body .card-title span {
+  font-weight: 700;
+  opacity: 0.6;
+}
+section .premium-section .plan-list .card-plan .card-body .card-benefit {
+  margin-top: 24px;
+}
+section .premium-section .plan-list .card-plan .card-body .card-benefit li {
+  margin-bottom: 14px;
+}
+section .premium-section .plan-list .card-plan .card-btn {
+  padding: 24px;
+  text-align: center;
+}
+section .premium-section .plan-list .card-plan .card-btn a {
+  display: flex;
+  align-items: center;
+  border-radius: 24px;
+  justify-content: center;
+  text-decoration: none;
+  font-weight: 600;
+  width: 100%;
+  height: 48px;
+  color: #212121;
+  background-color: #1db954;
+}
+section .blog-section .blog-list {
+  margin: 50px 0px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+section .blog-section .blog-list .blog-item {
+  margin-bottom: 64px;
+  width: 30%;
+}
+section .blog-section .blog-list .blog-item .blog-thumnail {
+  background-color: #eaeaea;
+  width: 100%;
+  height: 200px;
+  margin-bottom: 24px;
+  border-radius: 4px;
+}
+section .blog-section .blog-list .blog-item .blog-thumnail img {
+  width: 100%;
+  border-radius: 4px;
+  height: 100%;
+  background-size: cover;
+}
+section .blog-section .blog-list .blog-item .card-body .blog-title {
+  margin-bottom: 24px;
+}
+section .blog-section .blog-list .blog-item .card-body .blog-title h3 {
+  margin-bottom: 10px;
+}
+section .blog-section .blog-list .blog-item .card-body .blog-title p {
+  font-size: 14px !important;
+}
+section .blog-section .blog-list .blog-item .card-body .read-btn {
+  transition: all ease 0.4s;
+  cursor: pointer;
+  display: flex;
+  font-size: 18px;
+  align-items: center;
+  justify-content: space-between;
+}
+section .blog-section .blog-list .blog-item .card-body .read-btn i {
+  font-size: 32px;
+  transform: rotate(45deg);
+}
+section .blog-section .blog-list .blog-item .card-body:hover .read-btn {
+  color: #1db954;
+}
+
+footer {
+  background-color: #121212;
+  padding: 50px 0px;
+}
+footer .footer {
+  display: flex;
+  align-items: top;
+  justify-content: space-between;
+  flex-direction: row;
+  flex-wrap: nowrap;
+}
+footer .footer .logo, footer .footer section .premium-section .plan-list .card-plan .card-body .card-title .card-logo, section .premium-section .plan-list .card-plan .card-body .card-title footer .footer .card-logo {
+  color: #fdfdfd;
+  font-weight: 600;
+  font-size: 42px;
+}
+footer .footer .footer-menu {
+  display: flex;
+  align-items: top;
+  justify-content: space-between;
+  flex-direction: row;
+  flex-wrap: nowrap;
+}
+footer .footer .footer-menu .list-menu {
+  margin: 0px 32px;
+  list-style: none;
+}
+footer .footer .footer-menu .list-menu h4 {
+  margin-bottom: 24px;
+  color: #1db954;
+  font-weight: 700;
+}
+footer .footer .footer-menu .list-menu .list-link {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 8px;
+}
+footer .footer .footer-menu .list-menu .list-link a {
+  margin-bottom: 14px;
+  color: #fdfdfd;
+  font-weight: 300;
+  text-decoration: none;
+  opacity: 0.9;
+  transition: all ease 0.1s;
+}
+footer .footer .footer-menu .list-menu .list-link a:hover {
+  font-weight: 400;
+  opacity: 1;
+}
+footer .footer .footer-social-link {
+  display: flex;
+}
+footer .footer .footer-social-link a {
+  font-size: 20px;
+  height: 20px;
+  text-decoration: none;
+  padding: 14px;
+  border-radius: 50%;
+  color: #fdfdfd;
+  background-color: rgba(255, 255, 255, 0.1254901961);
+  display: flex;
+  align-items: center;
+  margin-right: 14px;
+}
+footer .footer-copy {
+  color: #fdfdfd;
+  font-weight: 300;
+  opacity: 0.5;
+  padding: 14px 0px;
+  margin-top: 32px;
+  font-size: 14px;
 }
 
 /* Media Screen Mobile 390px to 768px */
@@ -274,6 +529,43 @@ section .hero-section .hero-img img {
     width: 100%;
     height: 100%;
     background-size: cover;
+  }
+  section .trending-music .trend-list {
+    margin: 32px 0px;
+    flex-direction: column;
+    flex-wrap: nowrap;
+  }
+  section .trending-music .trend-list .items {
+    width: 80%;
+  }
+  section .premium-section .plan-list {
+    flex-direction: column;
+  }
+  section .premium-section .plan-list .card-plan {
+    width: 90%;
+    margin-bottom: 24px;
+  }
+  section .blog-section .blog-list {
+    flex-direction: column;
+  }
+  section .blog-section .blog-list .blog-item {
+    width: 90%;
+  }
+  footer .footer {
+    flex-direction: column;
+  }
+  footer .footer .footer-menu {
+    margin-top: 40px;
+    flex-direction: column;
+  }
+  footer .footer .footer-menu .list-menu {
+    margin: 0px;
+  }
+  footer .footer .footer-social-link {
+    margin: 24px auto;
+  }
+  footer .footer-copy {
+    text-align: center;
   }
 }
 /* Media Screen Tablet 768px to 992px *//*# sourceMappingURL=style.css.map */
